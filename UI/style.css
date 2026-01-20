@@ -1,3 +1,4 @@
+/* === Global Reset & Font Setup === */
 .inter {
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
@@ -15,6 +16,7 @@ p {
   color: #b7b1b1;
 }
 
+/* === Button Styles === */
 .btn-part {
   background: linear-gradient(40deg, rgba(247, 233, 63, 1), rgba(251, 9, 180, 1), rgba(145, 0, 248, 1));
   display: flex;
@@ -35,6 +37,7 @@ p {
   width: 20px;
 }
 
+/* === Header & Navbar === */
 .header-section {
   background-color: rgb(31, 13, 56);
 }
@@ -86,8 +89,9 @@ p {
   text-decoration: none;
 }
 
+/* === Banner Section === */
 .banner {
-  min-height: 50vh;
+  min-height: 60vh;
   background-image: url(../hero-bg.png);
   background-size: cover;
   background-position: center;
@@ -101,17 +105,17 @@ p {
 }
 
 .hero-images {
-  height: 400px;
+  height: auto;
 }
 
 .img-circle {
   position: relative;
-  max-width: 100%;
+  top: 80px;
 }
 
 .img-mic {
   position: relative;
-  bottom: 270px;
+  bottom: 200px;
   left: 115px;
 }
 
@@ -145,7 +149,7 @@ p {
   left: 270px;
   background-color: #00FF88;
   color: #000;
-  bottom: 510px;
+  bottom: 420px;
 }
 
 .button {
@@ -168,6 +172,7 @@ p {
   background-color: transparent;
 }
 
+/* === About Us Section === */
 .About-us {
   background-color: rgba(26, 11, 46, 1);
   padding: 50px 200px 120px;
@@ -225,6 +230,7 @@ span {
   background-color: rgba(35, 14, 61, 1);
 }
 
+/* === Features Section === */
 .container {
   max-width: 1260px;
   margin: 0 auto;
@@ -257,7 +263,6 @@ span {
   padding: 45px;
   text-align: start;
   transition: all 0.5s ease;
-  backdrop-filter: blur(8px);
   min-height: 220px;
   display: flex;
   flex-direction: column;
@@ -265,10 +270,10 @@ span {
   align-items: start;
 }
 
-.feature-box:hover {
+.feature-box:hover, .host-info:hover {
   transform: translateY(-6px);
   border-color: #ffffff66;
-  box-shadow: 0 16px 40px rgba(0, 212, 255, 0.1);
+  box-shadow: 8px 16px 40px rgba(7, 189, 225, 0.1);
 }
 
 .icon {
@@ -294,6 +299,7 @@ span {
   min-height: 550px;
 }
 
+/* === Secondary Container === */
 .container_2 {
   max-width: 1260px;
   margin: 0 auto;
@@ -308,6 +314,7 @@ span {
   width: 70px;
 }
 
+/* === Episode Section === */
 .episode {
   background-color: rgba(26, 11, 46, 1);
   padding: 120px 120px;
@@ -352,11 +359,9 @@ iframe {
   justify-content: start;
   align-items: start;
   gap: 10px;
-
 }
 
-
-
+/* === Host Section === */
 .Host-part {
   max-width: 1200px;
   margin: 0 auto;
@@ -369,16 +374,16 @@ iframe {
   font-size: 48px;
   font-weight: 700;
   line-height: 58px;
-
 }
 
 .host-info {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* border: 1px solid #b7b1b1; */
   border-radius: 40px;
   background-color: rgb(31, 13, 56);
+  transition: all 0.5s ease;
+  backdrop-filter: blur(8px);
   padding: 40px;
   gap: 24px;
 }
@@ -399,7 +404,6 @@ iframe {
   list-style: none;
   display: flex;
   gap: 20px;
-
 }
 
 .host-li {
@@ -409,6 +413,7 @@ iframe {
   cursor: pointer;
 }
 
+/* === Footer Section === */
 .footer-part {
   background-image: url(../footer-bg.png);
   min-height: 30vh;
@@ -422,7 +427,7 @@ iframe {
   overflow: hidden;
 }
 
-.footer-describtion {
+.footer-description {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -430,7 +435,7 @@ iframe {
   gap: 32px;
 }
 
-.footerlogo {
+.footer_logo {
   font-size: 75px;
 }
 
@@ -449,6 +454,7 @@ iframe {
   gap: 8px;
 }
 
+/* === Responsive Media Queries (Mobile) === */
 @media (max-width: 568px) {
 
   .navbar-item {
@@ -462,8 +468,8 @@ iframe {
   }
 
   .banner {
-    min-width: 20vh;
-    padding: 45px 0 0 0;
+    min-height: 20vh;
+    padding: 2px;
   }
 
   .hero-content {
@@ -472,11 +478,35 @@ iframe {
 
   .hero-header {
     font-size: 40px;
-    padding: 20px 0 8px 0;
+    padding: 40px 0 8px 0;
   }
 
   .hero-description {
     padding: 0 20px 24px;
+  }
+
+  .circle {
+    height: 180px;
+    width: 180px;
+  }
+
+  .img-mic {
+    bottom: 60px;
+    left: 65px;
+  }
+
+  .mic {
+    height: 75px;
+    width: 50px;
+  }
+
+  #New-item {
+    text-align: center;
+    bottom: 180px;
+    left: 120px;
+    width: 60px;
+    padding: 5px 8px;
+    font-size: 14px;
   }
 
   .About-us {
@@ -515,47 +545,64 @@ iframe {
     font-weight: 700;
     margin-bottom: 18px;
   }
-  .grid-2col, .right-column{
+
+  .grid-2col,
+  .right-column {
     gap: 16px;
   }
-  .feature-box{
+
+  .feature-box {
     padding: 24px;
   }
-  .container_2{
+
+  .container_2 {
     padding: 0 20px 40px;
     gap: 16px;
   }
-  .icon{
+
+  .icon {
     font-size: 3.5rem;
   }
-  .episode{
+
+  .episode {
     padding: 40px 20px;
   }
-  .card_list{
+
+  .card_list {
     flex-direction: column;
     padding-bottom: 60px;
     gap: 25px;
   }
-  .host-header{
+
+  .host-header {
     padding: 0 0 24px 0;
     font-size: 32px;
   }
-  .host-name{
+
+  .host-name {
     font-size: 20px;
   }
-  .host-info{
+
+  .host-info {
     flex-direction: column;
     text-align: center;
     padding: 24px;
     gap: 16px;
   }
-  .social_link{
+
+  .social_link {
     text-align: center;
     justify-content: center;
   }
-  .footer-list{
-    grid-template-columns: repeat(2 , 1fr);
+
+  .footer-list {
+    grid-template-columns: repeat(2, 1fr);
     gap: 16px;
+  }
+
+  .footer-part {
+    min-height: 0;
+    padding: 40px 20px;
   }
 
   .nav-item,
@@ -565,7 +612,6 @@ iframe {
 
   .menu {
     display: block;
-
   }
 
   .grid-2col,
@@ -585,3 +631,43 @@ iframe {
     font-size: 2rem;
   }
 }
+
+@keyframes pulseGradient {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+  100% { transform: scale(1); }
+}
+@keyframes pulseGradient-img {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.04); }
+  100% { transform: scale(1); }
+}
+
+.btn-part, #New-item {
+  animation: pulseGradient 5s infinite ease-in-out;
+}
+.img-circle{
+  animation: pulseGradient-img 2s infinite ease-in-out;
+}
+
+@keyframes fadeUp {
+  0% { opacity: 0; transform: translateY(40px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.hero-header, .About-header {
+  animation: fadeUp 3.5s ease-out forwards;
+}
+
+@keyframes floatCard {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+.card:hover, .item-point:hover {
+  animation: floatCard 1.2s ease-in-out infinite;
+}
+
+
+
